@@ -972,8 +972,8 @@ let functions = {
 
     nextRoundWhenXPlayer: () => {
 
+        
         window.location.reload();
-
         if (player1 === 'x') {
             
             // return console.log("player1 =x");
@@ -983,11 +983,13 @@ let functions = {
         } else if (player1 === 'o') {
             
             // return console.log("player1 = 0");
-            playerSideResultPar1.innerHTML = localStorage.getItem("countWinPlayerSide1");
-            playerSideResultPar2.innerHTML = localStorage.getItem("countWinPlayerSide2");
+            playerSideResultPar1.innerHTML = localStorage.getItem("countWinPlayerSide2");
+            playerSideResultPar2.innerHTML = localStorage.getItem("countWinPlayerSide1");
             tiesResultPar.innerHTML = localStorage.getItem("countTies");
         }
 
+
+     
 
         console.log(player1)
 
@@ -1109,7 +1111,7 @@ if (gameType === "false") {
         inputsArr.forEach(input => {
             input.addEventListener('click', () => {
                 if (player === "x") {
-                    let playerInput = inputsImgsArr.filter(inputImg => inputImg.id == input.id)[0];
+                    let playerInput = inputsImgsArr.filter(inputImg => inputImg.id == input.id && idsArr.includes(input.id))[0];
                     playerInput.src = "./assets/icon-x.svg"
                     playerSideImg.setAttribute('src', './assets/icon-o(third).svg')
                     playerSide = 'o';
@@ -1123,7 +1125,7 @@ if (gameType === "false") {
                         functions.checkResults();
                     }, 250)
                 } else if (player === "o") {
-                    let playerInput = inputsImgsArr.filter(inputImg => inputImg.id == input.id)[0];
+                    let playerInput = inputsImgsArr.filter(inputImg => inputImg.id == input.id && idsArr.includes(input.id))[0];
                     playerInput.src = "./assets/icon-o.svg"
                     playerSideImg.setAttribute('src', './assets/icon-x(second).svg')
                     playerSide = 'x';
@@ -1153,7 +1155,7 @@ if (gameType === "false") {
         inputsArr.forEach(input => {
             input.addEventListener('click', () => {
                 if (playerSide === "o") {
-                    let playerInput = inputsImgsArr.filter(inputImg => inputImg.id == input.id)[0];
+                    let playerInput = inputsImgsArr.filter(inputImg => inputImg.id == input.id && idsArr.includes(input.id))[0];
                     playerInput.src = "./assets/icon-o.svg"
                     playerSideImg.setAttribute('src', './assets/icon-x(second).svg')
                     playerSide = 'x';
@@ -1167,7 +1169,7 @@ if (gameType === "false") {
                         functions.checkResults();
                     }, 250)
                 } else if (playerSide === "x") {
-                    let playerInput = inputsImgsArr.filter(inputImg => inputImg.id == input.id)[0];
+                    let playerInput = inputsImgsArr.filter(inputImg => inputImg.id == input.id && idsArr.includes(input.id))[0];
                     playerInput.src = "./assets/icon-x.svg"
                     playerSideImg.setAttribute('src', './assets/icon-o(third).svg')
                     playerSide = 'o';
