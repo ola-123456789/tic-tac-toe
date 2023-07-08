@@ -58,7 +58,7 @@ const formulas = {
         newGameVsCpuBtn.addEventListener('click', () => {
             localStorage.setItem("gameType", playerVsCpu);
             console.log(localStorage.getItem('gameType'))
-            window.location.href = "solo.html";
+            window.location.href = "main.html";
         })
     },
 
@@ -67,7 +67,7 @@ const formulas = {
             playerVsCpu = false;
             localStorage.setItem("gameType", playerVsCpu);
             console.log(localStorage.getItem('gameType'))
-            window.location.href = "solo.html"
+            window.location.href = "main.html"
         })
     },
 
