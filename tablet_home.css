@@ -1,0 +1,45 @@
+@media screen and (min-width: 768px) {
+    .new_game_div {
+
+        gap: 40px;
+        height: 471px;
+        width: 460px;
+    
+    
+    }
+
+    .pick_player_mark_div {
+        width: 460px;
+    }
+
+    .pick_player_mark_par {
+        margin-left: calc(134.5px - 24px);
+    }
+
+    .player_side_form {
+        width: 412px;
+    }
+
+    .player_side_form>label {
+        width: 198px;
+        background-position: left 83px top 11px;
+    }
+
+    .x_goes_first_par {
+        margin-left: calc(134.5px - 24px);
+    }
+
+    .buttons_div {
+        gap: 20px;
+    }
+
+    .buttons_div>button {
+        height: 67px;
+        width: 460px;
+        padding-top: 17px;
+        padding-bottom: 25px;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 1.25px;
+    }
+}

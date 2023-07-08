@@ -1,0 +1,48 @@
+@media screen and (min-width: 1440px) {
+
+    .player_side_form>label:hover {
+        cursor: pointer;
+    }
+
+    .pick_player_mark_par {
+        text-transform: uppercase;
+    }
+
+    .buttons_div>button:hover {
+        cursor: pointer;
+    }
+
+    .new_game_vs_cpu {
+        padding-right: 121.5px;
+        padding-left: 121.5px;
+    }
+
+    .new_game_vs_player {
+        padding-left: 101.5px;
+        padding-right: 99.5px;
+    }
+
+    .new_game_vs_cpu:hover {
+        background: rgba(255, 200, 96, 1);
+
+    }
+
+    .new_game_vs_player:hover {
+        background: rgba(101, 233, 228, 1);
+
+    }
+
+    .buttons_div>button:disabled {
+        cursor: default;
+    }
+    
+    .new_game_vs_cpu:disabled {
+        background: #F2B137;
+    }
+    
+    .new_game_vs_player:disabled {
+        background: #31C3BD; 
+    }
+
+
+}

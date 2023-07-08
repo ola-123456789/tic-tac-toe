@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Space+Mono:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="tablet_home.css">
+  <link rel="stylesheet" href="desktop_home.css">
+
+  <title>Frontend Mentor | Tic Tac Toe</title>
+</head>
+
+<body>
+  <main>
+    <div class="new_game_div">
+      <img src="./assets/logo.svg" alt="logo" class="logo_img">
+      <div class="pick_player_mark_div">
+        <p class="pick_player_mark_par">PICK PLAYER 1’S MARK</p>
+        <form class="player_side_form">
+          <input type="radio" value="x" class="player_x" id="player_x" name="player_side"><label for="player_x" class="player_x_label" id="player_x_label"></label>
+          <input type="radio" value="o" class="player_o" id="player_o" name="player_side"><label for="player_o" class="player_o_label" id="player_o_label"></label>
+        </form>
+        <p class="x_goes_first_par">REMEMBER : X GOES FIRST</p>
+      </div>
+      <div class="buttons_div">
+        <button class="new_game_vs_cpu" id="new_game_vs_cpu" disabled>NEW GAME (VS CPU)</button>
+        <button class="new_game_vs_player" id="new_game_vs_player" disabled>NEW GAME (VS PLAYER)</button>
+      </div>
+    </div>
+
+  </main>
+
+
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>

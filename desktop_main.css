@@ -1,0 +1,88 @@
+@media screen and (min-width: 1440px) {
+
+    label:hover {
+        cursor: pointer;
+        /* background-image: url(./assets/icon-o-outline.svg);
+        background-repeat: no-repeat;
+        background-position: center; */
+    }
+
+    .logo_img:hover {
+        cursor: pointer;
+    }
+
+    .icon_restart_div:hover {
+        cursor: pointer;
+        background-color: rgba(219, 232, 237, 1);
+    }
+
+    #cancel_btn:hover {
+        cursor: pointer;
+        background: rgba(219, 232, 237, 1);
+    } 
+    
+    
+    #quit_btn:hover {
+        cursor: pointer;
+        background: rgba(219, 232, 237, 1);
+    }
+
+    #restart_btn:hover {
+        cursor: pointer;
+        background: rgba(255, 200, 96, 1);
+    }
+
+    #next_round_btn:hover {
+        cursor: pointer;
+        background: rgba(255, 200, 96, 1);
+    }
+
+    .main_content {
+        padding: 45px 474px 45px 475px;
+    }
+
+    #game_result_par {
+        text-transform: uppercase;
+    }
+
+    #winners_par {
+        text-transform: uppercase;
+    }
+
+
+    #btns_div>button {
+        text-transform: uppercase;
+    }
+
+    #main_content_for_restart_game {
+        padding: 67px 544px 66px 545px;
+    }
+
+
+    #winners_par_for_restart_game {
+        text-transform: uppercase;
+
+    }
+
+    #close_window_btn {
+        margin-left: 670px;
+    }
+
+
+
+
+
+    /* header */
+
+    .player_turn_par {
+        text-transform: uppercase;
+    }
+
+    .par_2 {
+        text-transform: uppercase;
+    }
+
+
+
+
+}

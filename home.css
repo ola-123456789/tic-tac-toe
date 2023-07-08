@@ -1,0 +1,167 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1A2A33;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    height: 100vh;
+}
+
+.new_game_div {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    height: 429px;
+    width: 327px;
+
+
+}
+
+.logo_img {
+    width: 72px;
+    height: 32px;
+}
+
+.pick_player_mark_div {
+    display: flex;
+    flex-direction: column;
+    height: 205px;
+    width: 327px;
+    padding: 24px 24px 30px 24px;
+    background: #1F3641;
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.pick_player_mark_par {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #A8BFC9;
+    margin-left: calc(67.5px - 24px);
+    height: 20px;
+    width: 191px;
+}
+
+.player_side_form {
+    display: flex;
+    flex-direction: row;
+    height: 72px;
+    width: 279px;
+    background: #1A2A33;
+    border-radius: 10px;
+    margin-top: 24px;
+    margin-bottom: 17px;
+    padding: 9px 8px;
+    box-sizing: border-box;
+}
+
+.player_side_form>input {
+    display: none;
+    position: relative;
+    height: 54px;
+    width: 131.5px;
+    border-radius: 10px;
+}
+
+.player_side_form>label {
+    display: inline-block;
+    height: 54px;
+    width: 131.5px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: left 50px top 11px;
+}
+
+.player_x_label {
+    background-color: #1A2A33;
+    background-image: url(./assets/icon-x\(second\).svg);
+}
+
+.player_o_label {
+    background-color: #1A2A33;
+    background-image: url(./assets/icon-o\(third\).svg);
+}
+
+.active_x {
+    background-color: #A8BFC9 !important;
+    background-image: url(./assets/icon-x\(active\).svg);
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: left 50px top 11px;
+}
+
+.active_o {
+    background-color: #A8BFC9 !important;
+    background-image: url(./assets/icon-o\(second\).svg);
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: left 50px top 11px;
+}
+
+.x_goes_first_par {
+    Width: 193px;
+    Height: 18px;
+    margin-left: calc(68px - 24px);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.buttons_div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.buttons_div>button {
+    height: 56px;
+    width: 327px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding-top: 14px;
+    padding-bottom: 22px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1A2A33;
+    border: 0px;
+}
+
+.buttons_div>button:disabled {
+    opacity: 0.5;
+}
+
+.new_game_vs_cpu {
+    background: #F2B137;
+    box-shadow: inset 0px -8px 0px #CC8B13;
+}
+
+.new_game_vs_player {
+    background: #31C3BD;
+    box-shadow: inset 0px -8px 0px #118C87;
+}

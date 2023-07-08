@@ -1,0 +1,167 @@
+@media screen and (min-width: 768px) {
+    body {
+
+        padding: 0px 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .main_content {
+        height: 266px;
+        padding: 45px 138px 45px 139px;
+    }
+
+
+    #game_result_par {
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        margin-right: 163.5px;
+        margin-left: 162.5px;
+    }
+
+    #who_takes_round_div {
+        gap: 24px;
+        width: 491px;
+        height: 64px;
+        
+    }
+
+    #winners_img {
+        width: 64px;
+        height: 64px;
+    }
+
+    #winners_par {
+        font-size: 39px;
+        line-height: 50px;
+        letter-spacing: 2.5px;
+
+    }
+
+    #btns_div {
+        margin-left: 126px;
+        margin-right: 127px;
+    }
+
+    #main_content_for_restart_game {
+        height: 266px;
+        padding: 67px 208px 66px 209px;
+    }
+
+    #winners_par_for_restart_game {
+        height: 50px;
+        width: 348px;
+        font-size: 39px;
+        line-height: 50px;
+        letter-spacing: 2.5px;
+        margin-bottom: 31px;
+        margin-left: 1px;
+        margin-right: 2px;
+
+    }
+
+    #btns_div_for_restart_game {
+        margin-left: 22px;
+    }
+
+    #close_window_btn {
+        width: 64px;
+        height: 64px;
+        margin-top: -201px;
+        margin-left: 410px;
+    }
+
+
+
+
+
+
+    /* HEADER */
+    .logo_img {
+        margin-right: 85.03px;
+    }
+
+    .player_turn_div {
+        height: 52px;
+        width: 140px;
+        padding: 13px 30px 19px 30px;
+        margin-right: 108px;
+        border-radius: 10px;
+    }
+
+    .player_side {
+        height: 20px;
+        width: 20px;
+        margin-right: 13px;
+    }
+
+    .player_turn_par {
+        height: 20px;
+        width: 47px;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+
+    .icon_restart_div {
+        padding: 16px;
+        height: 52px;
+        width: 52px;
+        border-radius: 10px;
+    }
+
+    .icon_restart {
+        height: 20px;
+        width: 20px;
+    }
+
+
+
+
+
+
+    main {
+        width: 460px;
+        margin-top: 19px;
+    }
+
+    main>input {
+        height: 140px;
+        width: 140px;
+    }
+
+    main>label {
+        height: 140px;
+        width: 140px;
+        border-radius: 15px;
+        padding: 38px;
+    }
+
+
+
+
+
+
+
+
+
+
+    footer {
+        width: 459px;
+        margin-top: 19px;
+    }
+
+    footer>div {
+        height: 72px;
+        width: 140px;
+        border-radius: 15px;
+    }
+
+    .par_2 {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 1.5px;
+    }
+}

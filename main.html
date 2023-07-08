@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Space+Mono:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="tablet_main.css">
+  <link rel="stylesheet" href="desktop_main.css">
+  <title>Solo Play</title>
+</head>
+
+<body>
+
+
+
+  <div id="game_result_div">
+
+    
+    <div id="main_content_for_restart_game" class="main_content">
+      <div id="main_content_div_for_restart_game" class="main_content_div">
+        <p id="winners_par_for_restart_game">RESTART GAME?</p>
+        <div id="btns_div_for_restart_game">
+          
+          <button id="cancel_btn">NO, CANCEL</button>
+          <button id="restart_btn">YES, RESTART</button>
+          
+        </div>
+      </div>
+    </div>
+
+
+    <div id="main_content_for_game_result" class="main_content">
+      <div id="main_content_div_for_game_result" class="main_content_div">
+        <p id="game_result_par">
+
+        </p>
+        <div id="who_takes_round_div">
+          <img alt="winners_img" id="winners_img">
+          <p id="winners_par">
+  
+          </p>
+        </div>
+        <div id="btns_div">
+          <img src="./assets/close.png" alt="close_window_button" id="close_window_btn">
+          <button id="quit_btn">QUIT</button>
+          <button id="next_round_btn">NEXT ROUND</button>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+
+
+
+
+  <header>
+   
+    <img src="./assets/logo.svg" alt="logo" class="logo_img" id="logo_img">
+    <div class="player_turn_div">
+      <img alt="player_side" class="player_side" id="player_side">
+      <p class="player_turn_par">TURN</p>
+    </div>
+    <div class="icon_restart_div" id="icon_restart_div">
+      <img src="./assets/icon-restart.svg" alt="icon_restart" class="icon_restart">
+    </div>
+  </header>
+
+
+  <!-- onmouseover="backgroundOnHover(this)" -->
+
+
+  <main>
+    <input type="radio" name="x_o_game" id="1"><label for="1" id="1"><img id="1" class="x_o_game_inputs"></label>
+    <input type="radio" name="x_o_game" id="2"><label for="2" id="2"><img id="2" class="x_o_game_inputs"></label>
+    <input type="radio" name="x_o_game" id="3"><label for="3" id="3"><img id="3" class="x_o_game_inputs"></label>
+    <input type="radio" name="x_o_game" id="4"><label for="4" id="4"><img id="4" class="x_o_game_inputs"></label>
+    <input type="radio" name="x_o_game" id="5"><label for="5" id="5"><img id="5" class="x_o_game_inputs"></label>
+    <input type="radio" name="x_o_game" id="6"><label for="6" id="6"><img id="6" class="x_o_game_inputs"></label>
+    <input type="radio" name="x_o_game" id="7"><label for="7" id="7"><img id="7" class="x_o_game_inputs"></label>
+    <input type="radio" name="x_o_game" id="8"><label for="8" id="8"><img id="8" class="x_o_game_inputs"></label>
+    <input type="radio" name="x_o_game" id="9"><label for="9" id="9"><img id="9" class="x_o_game_inputs"></label>
+  </main>
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="playe_side_div">
+      <p class="player_side_par par_1" id="player_side_par"></p>
+      <p class="player_result_par par_2" id="player_side_result_par"></p>
+      <!-- X (YOU) -->
+    </div>
+    <div class="ties_div">
+      <p class="ties_par par_1">TIES</p>
+      <p class="ties_result_par par_2"  id="ties_result_par"></p>
+    </div>
+    <div class="cpu_side_div">
+      <p class="cpu_side_par par_1" id="cpu_side_par"></p>
+      <!-- O (CPU) -->
+      <p class="cpu_result_par par_2" id="cpu_side_result_par"></p>
+    </div>
+  </footer>
+
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
