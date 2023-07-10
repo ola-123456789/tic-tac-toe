@@ -37,8 +37,8 @@ body {
 .pick_player_mark_div {
     display: flex;
     flex-direction: column;
-    height: 205px;
-    width: 327px;
+/*     height: 205px;
+    width: 327px; */
     padding: 24px 24px 30px 24px;
     background: #1F3641;
     box-shadow: inset 0px -8px 0px #10212A;
