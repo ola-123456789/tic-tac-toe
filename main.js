@@ -2003,7 +2003,7 @@ if (gameType === "false") {
 
                                 } else if(!winningChoise.includes("7") && !winningChoise.includes("9")) {
                                     
-                                    if (player2Input[1] === "8") {
+                                    if (player2Input[1] === "8" && ((player1Input[0] === "7" && player1Input[1] === "9") || (player1Input[0] === "9" && player1Input[1] === "7"))) {
                                         setTimeout(() => {
                                             cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "3" && idsArr.includes("3"))[0];
                                             cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
