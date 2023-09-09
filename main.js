@@ -2001,6 +2001,23 @@ if (gameType === "false") {
                                     }
 
 
+                                } else if(!winningChoise.includes("7") && !winningChoise.includes("9")) {
+                                    
+                                    if (player2Input[1] === "8") {
+                                        setTimeout(() => {
+                                            cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "3" && idsArr.includes("3"))[0];
+                                            cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                            player2Input.push(cpuInputClicked.id);
+                                            filledInputs.push(cpuInputClicked.id);
+                                            index = idsArr.indexOf(cpuInputClicked.id);
+                                            if (idsArr.includes(cpuInputClicked.id)) {
+                                                idsArr.splice(index, 1);
+                                            }
+                                            playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                        }, 250)
+                                    }
+
                                 } else {
                                     if (cpuWinningArrFor1.length > 0) {
                                         index = Math.floor(Math.random() * cpuWinningArrFor1.length);
