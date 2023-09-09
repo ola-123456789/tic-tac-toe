@@ -235,6 +235,7 @@ let functions = {
                             playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
 
                         }, 250);
+
                     } else if (player1Input[0] === "8") {
                         setTimeout(() => {
                             possibleOptions = ["3", "5", "7"];
@@ -498,10 +499,22 @@ let functions = {
 
                         }, 250);
                     } else if (player1Input[0] === "1") {
+                        // setTimeout(() => {
+                        //     possibleOptions = ["3", "9"];
+                        //     randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                        //     cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === possibleOptions[randomIndex] && idsArr.includes(possibleOptions[randomIndex]))[0];
+                        //     cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                        //     player2Input.push(cpuInputClicked.id);
+                        //     filledInputs.push(cpuInputClicked.id);
+                        //     index = idsArr.indexOf(cpuInputClicked.id);
+                        //     if (idsArr.includes(cpuInputClicked.id)) {
+                        //         idsArr.splice(index, 1);
+                        //     }
+                        //     playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                        // }, 250);
                         setTimeout(() => {
-                            possibleOptions = ["3", "9"];
-                            randomIndex = Math.floor(Math.random() * possibleOptions.length);
-                            cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === possibleOptions[randomIndex] && idsArr.includes(possibleOptions[randomIndex]))[0];
+                            cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "9" && idsArr.includes("9"))[0];
                             cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
                             player2Input.push(cpuInputClicked.id);
                             filledInputs.push(cpuInputClicked.id);
@@ -972,16 +985,16 @@ let functions = {
 
     nextRoundWhenXPlayer: () => {
 
-        
+
         window.location.reload();
         if (player1 === 'x') {
-            
+
             // return console.log("player1 =x");
             playerSideResultPar1.innerHTML = localStorage.getItem("countWinPlayerSide1");
             playerSideResultPar2.innerHTML = localStorage.getItem("countWinPlayerSide2");
             tiesResultPar.innerHTML = localStorage.getItem("countTies");
         } else if (player1 === 'o') {
-            
+
             // return console.log("player1 = 0");
             playerSideResultPar1.innerHTML = localStorage.getItem("countWinPlayerSide2");
             playerSideResultPar2.innerHTML = localStorage.getItem("countWinPlayerSide1");
@@ -989,7 +1002,7 @@ let functions = {
         }
 
 
-     
+
 
         console.log(player1)
 
@@ -2001,23 +2014,6 @@ if (gameType === "false") {
                                     }
 
 
-                                } else if(!winningChoise.includes("7") && !winningChoise.includes("9")) {
-                                    
-                                    if (player2Input[1] === "8" && ((player1Input[0] === "7" && player1Input[1] === "9") || (player1Input[0] === "9" && player1Input[1] === "7"))) {
-                                        setTimeout(() => {
-                                            cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "3" && idsArr.includes("3"))[0];
-                                            cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
-                                            player2Input.push(cpuInputClicked.id);
-                                            filledInputs.push(cpuInputClicked.id);
-                                            index = idsArr.indexOf(cpuInputClicked.id);
-                                            if (idsArr.includes(cpuInputClicked.id)) {
-                                                idsArr.splice(index, 1);
-                                            }
-                                            playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
-
-                                        }, 250)
-                                    }
-
                                 } else {
                                     if (cpuWinningArrFor1.length > 0) {
                                         index = Math.floor(Math.random() * cpuWinningArrFor1.length);
@@ -2689,7 +2685,7 @@ if (gameType === "false") {
                                         }, 250);
                                     } else if (player2Input[1] === "9" && ((player1Input[0] === "6" && player1Input[1] === "8") || (player1Input[0] === "8" && player1Input[1] === "6"))) {
                                         setTimeout(() => {
-                                            possibleOptions = ["1", "3"];
+                                            possibleOptions = ["1", "5"];
                                             randomIndex = Math.floor(Math.random() * possibleOptions.length);
                                             cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === possibleOptions[randomIndex] && idsArr.includes(possibleOptions[randomIndex]))[0];
                                             cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
@@ -2716,6 +2712,58 @@ if (gameType === "false") {
 
                                         }, 250);
                                     }
+                                } else if (player2Input[1] === "9" && ((player1Input[0] === "1" && player1Input[1] === "8") || (player1Input[0] === "8" && player1Input[1] === "1"))) {
+                                    setTimeout(() => {
+                                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "3" && idsArr.includes("3"))[0];
+                                        cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                        player2Input.push(cpuInputClicked.id);
+                                        filledInputs.push(cpuInputClicked.id);
+                                        index = idsArr.indexOf(cpuInputClicked.id);
+                                        if (idsArr.includes(cpuInputClicked.id)) {
+                                            idsArr.splice(index, 1);
+                                        }
+                                        playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                    }, 250);
+                                } else if (player2Input[1] === "9" && ((player1Input[0] === "3" && player1Input[1] === "8") || (player1Input[0] === "8" && player1Input[1] === "3"))) {
+                                    setTimeout(() => {
+                                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "1" && idsArr.includes("1"))[0];
+                                        cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                        player2Input.push(cpuInputClicked.id);
+                                        filledInputs.push(cpuInputClicked.id);
+                                        index = idsArr.indexOf(cpuInputClicked.id);
+                                        if (idsArr.includes(cpuInputClicked.id)) {
+                                            idsArr.splice(index, 1);
+                                        }
+                                        playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                    }, 250);
+                                } else if (player2Input[1] === "3" && ((player1Input[0] === "1" && player1Input[1] === "5") || (player1Input[0] === "5" && player1Input[1] === "1"))) {
+                                    setTimeout(() => {
+                                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "9" && idsArr.includes("9"))[0];
+                                        cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                        player2Input.push(cpuInputClicked.id);
+                                        filledInputs.push(cpuInputClicked.id);
+                                        index = idsArr.indexOf(cpuInputClicked.id);
+                                        if (idsArr.includes(cpuInputClicked.id)) {
+                                            idsArr.splice(index, 1);
+                                        }
+                                        playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                    }, 250);
+                                } else if (player2Input[1] === "1" && ((player1Input[0] === "3" && player1Input[1] === "4") || (player1Input[0] === "4" && player1Input[1] === "3"))) {
+                                    setTimeout(() => {
+                                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "9" && idsArr.includes("9"))[0];
+                                        cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                        player2Input.push(cpuInputClicked.id);
+                                        filledInputs.push(cpuInputClicked.id);
+                                        index = idsArr.indexOf(cpuInputClicked.id);
+                                        if (idsArr.includes(cpuInputClicked.id)) {
+                                            idsArr.splice(index, 1);
+                                        }
+                                        playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                    }, 250);
                                 } else if (player2Input[1] === "4" && player1Input[0] === "8") {
                                     setTimeout(() => {
                                         cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "5" && idsArr.includes("5"))[0];
@@ -2822,6 +2870,71 @@ if (gameType === "false") {
 
                                         }, 250);
                                     }
+                                } else if (player2Input[1] === "7" && ((player1Input[0] === "1" && player1Input[1] === "8") || (player1Input[0] === "8" && player1Input[1] === "1"))) {
+                                    setTimeout(() => {
+                                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "3" && idsArr.includes("3"))[0];
+                                        cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                        player2Input.push(cpuInputClicked.id);
+                                        filledInputs.push(cpuInputClicked.id);
+                                        index = idsArr.indexOf(cpuInputClicked.id);
+                                        if (idsArr.includes(cpuInputClicked.id)) {
+                                            idsArr.splice(index, 1);
+                                        }
+                                        playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                    }, 250);
+                                } else if (player2Input[1] === "7" && ((player1Input[0] === "3" && player1Input[1] === "8") || (player1Input[0] === "8" && player1Input[1] === "3"))) {
+                                    setTimeout(() => {
+                                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "1" && idsArr.includes("1"))[0];
+                                        cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                        player2Input.push(cpuInputClicked.id);
+                                        filledInputs.push(cpuInputClicked.id);
+                                        index = idsArr.indexOf(cpuInputClicked.id);
+                                        if (idsArr.includes(cpuInputClicked.id)) {
+                                            idsArr.splice(index, 1);
+                                        }
+                                        playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                    }, 250);
+                                } else if (player2Input[1] === "3" && ((player1Input[0] === "3" && player1Input[1] === "8") || (player1Input[0] === "8" && player1Input[1] === "3"))) {
+                                    setTimeout(() => {
+                                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "1" && idsArr.includes("1"))[0];
+                                        cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                        player2Input.push(cpuInputClicked.id);
+                                        filledInputs.push(cpuInputClicked.id);
+                                        index = idsArr.indexOf(cpuInputClicked.id);
+                                        if (idsArr.includes(cpuInputClicked.id)) {
+                                            idsArr.splice(index, 1);
+                                        }
+                                        playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                    }, 250);
+                                } else if (player2Input[1] === "3" && ((player1Input[0] === "1" && player1Input[1] === "6") || (player1Input[0] === "6" && player1Input[1] === "1"))) {
+                                    setTimeout(() => {
+                                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "7" && idsArr.includes("7"))[0];
+                                        cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                        player2Input.push(cpuInputClicked.id);
+                                        filledInputs.push(cpuInputClicked.id);
+                                        index = idsArr.indexOf(cpuInputClicked.id);
+                                        if (idsArr.includes(cpuInputClicked.id)) {
+                                            idsArr.splice(index, 1);
+                                        }
+                                        playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                    }, 250);
+                                } else if (player2Input[1] === "1" && ((player1Input[0] === "3" && player1Input[1] === "5") || (player1Input[0] === "5" && player1Input[1] === "3"))) {
+                                    setTimeout(() => {
+                                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "7" && idsArr.includes("7"))[0];
+                                        cpuInputClicked.setAttribute('src', './assets/icon-x.svg');
+                                        player2Input.push(cpuInputClicked.id);
+                                        filledInputs.push(cpuInputClicked.id);
+                                        index = idsArr.indexOf(cpuInputClicked.id);
+                                        if (idsArr.includes(cpuInputClicked.id)) {
+                                            idsArr.splice(index, 1);
+                                        }
+                                        playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
+
+                                    }, 250);
                                 } else if (player2Input[1] === "6" && player1Input[0] === "8") {
                                     setTimeout(() => {
                                         cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "5" && idsArr.includes("5"))[0];
@@ -2835,7 +2948,6 @@ if (gameType === "false") {
                                         playerSideImg.setAttribute('src', './assets/icon-o(third).svg');
 
                                     }, 250);
-
                                 } else {
                                     if (cpuWinningArrFor1.length > 0) {
                                         index = Math.floor(Math.random() * cpuWinningArrFor1.length);
