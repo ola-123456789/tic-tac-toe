@@ -90,7 +90,8 @@ let functions = {
         console.log("functionWhenXChecked")
         if (player === "x") {
             if (filledInputs.length === 1) {
-                if (player1Input[0] === "1" || player1Input[0] === "3" || player1Input[0] === "7" || player1Input[0] === "9") {
+                //(player1Input[0] === "1" || player1Input[0] === "3" || player1Input[0] === "7" || player1Input[0] === "9")
+                if (player1Input[0] !== "5") {
                     setTimeout(() => {
                         cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === "5" && idsArr.includes("5"))[0];
                         cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
@@ -104,24 +105,26 @@ let functions = {
 
                     }, 250);
 
-                } else if (player1Input[0] === "2" || player1Input[0] === "4" || player1Input[0] === "6" || player1Input[0] === "8") {
-                    setTimeout(() => {
-                        possibleOptions = ["1", "3", "7", "9"]
-                        randomIndex = Math.floor(Math.random() * possibleOptions.length);
-                        cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === possibleOptions[randomIndex] && idsArr.includes(possibleOptions[randomIndex]))[0];
-                        cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
-                        player2Input.push(cpuInputClicked.id);
-                        filledInputs.push(cpuInputClicked.id);
+                }
+                // else if (player1Input[0] === "2" || player1Input[0] === "4" || player1Input[0] === "6" || player1Input[0] === "8") {
+                //     setTimeout(() => {
+                //         possibleOptions = ["1", "3", "7", "9"]
+                //         randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                //         cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id === possibleOptions[randomIndex] && idsArr.includes(possibleOptions[randomIndex]))[0];
+                //         cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                //         player2Input.push(cpuInputClicked.id);
+                //         filledInputs.push(cpuInputClicked.id);
 
-                        index = idsArr.indexOf(cpuInputClicked.id);
-                        if (idsArr.includes(cpuInputClicked.id)) {
-                            idsArr.splice(index, 1);
-                        }
-                        console.log(idsArr)
-                        playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                //         index = idsArr.indexOf(cpuInputClicked.id);
+                //         if (idsArr.includes(cpuInputClicked.id)) {
+                //             idsArr.splice(index, 1);
+                //         }
+                //         console.log(idsArr)
+                //         playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
 
-                    }, 250);
-                } else if (player1Input[0] === "5") {
+                //     }, 250);
+                // } 
+                else if (player1Input[0] === "5") {
                     setTimeout(() => {
                         possibleOptions = ["1", "3", "7", "9"]
                         randomIndex = Math.floor(Math.random() * possibleOptions.length);
@@ -1632,6 +1635,192 @@ if (gameType === "false") {
 
                                 }, 250)
                             }
+                        } else if (player1Input[0] === "4" && player2Input[0] === "5") {
+                            if (player1Input[1] === "2") {
+                                setTimeout(() => {
+                                    possibleOptions = ["3", "7"]
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            } else if (player1Input[1] === "3") {
+                                setTimeout(() => {
+                                    possibleOptions = ["1","2", "8"]
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            } else if (player1Input[1] === "6") {
+                                setTimeout(() => {
+                                    possibleOptions = ["1", "3", "7", "9"];
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            } else if (player1Input[1] === "8") {
+                                setTimeout(() => {
+                                    possibleOptions = ["1", "7", "9"];
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            } else if (player1Input[1] === "9") {
+                                setTimeout(() => {
+                                    possibleOptions = ["2", "8"];
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            }
+
+                        } else if (player1Input[0] === "6" && player2Input[0] === "5") {
+                            if (player1Input[1] === "1") {
+                                setTimeout(() => {
+                                    possibleOptions = ["3", "2", "8"]
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            } else if (player1Input[1] === "2") {
+                                setTimeout(() => {
+                                    possibleOptions = ["1", "9"]
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            } else if (player1Input[1] === "4") {
+                                setTimeout(() => {
+                                    possibleOptions = ["1", "3", "7", "9"];
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            } else if (player1Input[1] === "7") {
+                                setTimeout(() => {
+                                    possibleOptions = ["2", "8", "9"];
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            } else if (player1Input[1] === "8") {
+                                setTimeout(() => {
+                                    possibleOptions = ["3", "7", "9"];
+                                    randomIndex = Math.floor(Math.random() * possibleOptions.length);
+                                    clickOption = possibleOptions[randomIndex];
+                                    cpuInputClicked = inputsImgsArr.filter(inputImg => inputImg.id == clickOption)[0];
+                                    cpuInputClicked.setAttribute('src', './assets/icon-o.svg');
+                                    player2Input.push(clickOption);
+                                    filledInputs.push(clickOption);
+                                    index = idsArr.indexOf(clickOption);
+                                    if (idsArr.includes(clickOption)) {
+                                        idsArr.splice(index, 1);
+                                    }
+                                    playerSideImg.setAttribute('src', './assets/icon-x(second).svg');
+                                    // functions.algorithmFunction(filledInputs);
+
+
+                                }, 250)
+                            }
+
                         } else {
                             for (let i = 0; i < newArrCpu2For1.length; i++) {
                                 if ((idsArr.includes(newArrCpu2For1[i][0]) && idsArr.includes(newArrCpu2For1[i][1])) || (idsArr.includes(newArrCpu2For1[i][0]) && idsArr.includes(newArrCpu2For1[i][2])) || (idsArr.includes(newArrCpu2For1[i][2]) && idsArr.includes(newArrCpu2For1[i][1]))) {
@@ -1675,11 +1864,11 @@ if (gameType === "false") {
                                 }
                             }
                         }
+
+
+                        functions.algorithmFunction(filledInputs);
+
                     }
-
-
-                    functions.algorithmFunction(filledInputs);
-
                 }
             })
         })
